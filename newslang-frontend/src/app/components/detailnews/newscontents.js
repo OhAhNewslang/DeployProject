@@ -41,12 +41,17 @@ export default function NewsContents() {
       var token = window.localStorage.getItem("token");
       var newsUrl = window.localStorage.getItem("newsUrl");
     }
+    const controller = new AbortController();
+    const signal = controller.signal;
+    setTimeout(() => controller.abort(), 60000);
+
     fetch(`/api/chat/news/summarize?newUrl=${newsUrl}`, {
       // fetch(`/api/chat/news/summarize`, {
       method: "GET",
       headers: {
         "X-AUTH-TOKEN": token,
       },
+      signal: signal,
     })
       .then((res) => {
         if (res.status == 200) {

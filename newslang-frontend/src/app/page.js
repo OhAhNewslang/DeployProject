@@ -10,6 +10,7 @@ export default function Home() {
   let [subThumbnailNewsList, setSubThumbnailNews] = useState([]);
   let [liveThumbnailNewsList, setLiveThumbnailNews] = useState([]);
   let [LoginBox, setLoginBox] = useState("");
+  
 
   if (typeof window !== "undefined") {
     var token = window.localStorage.getItem("token");
@@ -22,6 +23,7 @@ export default function Home() {
   const items = Array.from({ length: 10 }, (_, i) => `Item ${i + 1}`);
   const indexOfLastItem = currentPage * itemsPerPage;
 
+  
   //페이지를 변경하도록 설정
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);

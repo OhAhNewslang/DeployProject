@@ -221,11 +221,14 @@ button.btnFile { width:23px; height:24px; background:url(../images/icon_file.jpg
 button.btnBlue { padding:0 10px; border:1px solid #36638D; background:#36638D; color:#fff; }
 button.btnGray { padding:0 10px; border:1px solid #f2f2f2; background:#e5e5e5; color:#333; }
 button.btnLight {  padding:0 10px;border:1px solid #36638D; background:#fff; color:#36638D; }
+button.btnSelLight {  padding:0 10px;border:1px solid #36638D; background:#36638D; color:#fff; }
 button.btnLightGray {  padding:0 10px;border:1px solid #c1c1c1; background:#fff; color:#828282; }
 button.btnLink {border:none; background:#fff; color:#0000EE; }
 button.btnLinkGray {border:none; background:#fff; color:#000;  }
-button.btnRed { padding:0 10px;border:1px solid #ecd9e0; background:#ecd9e0; color:#282828; }
+button.btnRed { padding:0 10px;border:1px solid #ff2e2e1a; background:#ff2e2e4b; color:#282828; }
 button.btnOrange { padding:0 10px;border:1px solid #faf0b5; background:#faf0b5; color:#333; }
+button.btnUnselBlue { padding:0 10px; border:1px solid #c3c6c9; background:#fff; color:#36638D; }
+button.btnUnselRed { padding:0 10px;border:1px solid #c3c6c9; background:#fff; color:#282828; }
 
 /* text color */
 .textRed { color:#e10000 !important; }
@@ -254,6 +257,7 @@ button.btnOrange { padding:0 10px;border:1px solid #faf0b5; background:#faf0b5; 
 .wrap.commonInfo { width:700px; }
 .smallExpense { position:relative; }
 .wrapper { position:relative; width:100%; height:100%; }
+.summarize { white-space: pre-wrap;}
 
 /*main1*/
 .main1 { width:1280px; margin:13px auto 0;  }
@@ -500,6 +504,9 @@ table tr.subSum2 td:nth-child(3) { font-weight:600; text-align:center; }
 .tableTypeBoard2 td a { color:#333; text-decoration:underline; }
 .tableTypeBoard2 td a:hover { text-decoration:underline; }
 .tableTypeBoard2 td.viewBox { height:500px; padding:20px 50px; overflow-y:auto; line-height:1.5; vertical-align:top;}
+.tableTypeBoard2 td.viewBox2 { height:auto; padding:20px 50px; overflow-y:auto; line-height:1.5; vertical-align:top;}
+.tableTypeBtn { border:none; border-bottom: none;}
+.tableTypeBtn td { border:none;}
 .email tr { height:50px; }
 .email tr td { line-height:1.5; }
 .email tr td a { text-decoration:underline; color:#136abd; }
@@ -908,3 +915,36 @@ table tr.subSum2 td:nth-child(3) { font-weight:600; text-align:center; }
     margin-left: 180px;
     margin-top: 35px;
 }
+
+.swal-text {
+  margin: 0px;
+  font-size: 15px;
+  margin-bottom: 28px;
+}
+.swal-title {
+  margin: 0px;
+  font-size: 20px;
+  margin-bottom: 28px;
+}
+.swal-button {
+  padding: 7px 19px;
+  border-radius: 2px;
+  background-color: #4962B3;
+  font-size: 12px;
+  border: 1px solid #3e549a;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.noLoginBox{
+  width: 450px;
+  height: 535px;
+  border: solid 1px;
+  position: relative;
+}
+.noLoginChild{
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  margin: -25px 0 0 -25px; 
+}
+
