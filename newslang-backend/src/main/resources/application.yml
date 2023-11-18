@@ -1,12 +1,9 @@
 spring:
-  profiles:
-    active: db
-
   datasource:
-    url: ${db.url}
-    username: ${db.username_}
-    driver-class-name: ${db.driver}
-    password: ${db.password}
+    url: jdbc:mysql://10.178.0.4:3306/newslang
+    username: newslang
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: newslang
 
   jpa:
     hibernate:
