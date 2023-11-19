@@ -941,7 +941,6 @@ table tr.subSum2 td:nth-child(3) { font-weight:600; text-align:center; }
 .noLoginBox{
   width: 450px;
   height: 535px;
-  border: solid 1px;
   position: relative;
 }
 .noLoginChild{
