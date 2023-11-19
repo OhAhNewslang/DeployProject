@@ -68,10 +68,10 @@ export default function Home() {
       },
     })
       .then((res) => {
-        if (res.status == 200) {
+        if (res.status === 200) {
           setLoginBox("none");
           return res.json();
-        } else if (res.status == 500) {
+        } else if (res.status === 500) {
           router.refresh();
           setLoginBox("");
         }

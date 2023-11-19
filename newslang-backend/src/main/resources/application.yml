@@ -1,9 +1,9 @@
 spring:
   datasource:
     url: jdbc:mysql://10.178.0.4:3306/newslang
-    username: newslang
+    username: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-    password: newslang
+    password: 1234
 
   jpa:
     hibernate:

@@ -27,17 +27,14 @@ public class CrawlingNewsServiceImpl implements CrawlingNewsService {
                 30000);
         Elements type06_headline = doc.getElementsByClass("type06_headline");
         Elements type06 = doc.getElementsByClass("type06");
-        if (type06_headline != null && type06_headline.size() > 0)
+        if (!type06_headline.isEmpty())
             newsList.addAll(parsingScriptToThumbnailNews(type06_headline, oId));
-        if (type06 != null && type06.size() > 0)
+        if (!type06.isEmpty())
             newsList.addAll(parsingScriptToThumbnailNews(type06, oId));
         return newsList;
     }
 
     private List<News> parsingScriptToThumbnailNews(Elements root, String oId){
-//        Document.OutputSettings outputSettings = new Document.OutputSettings();
-//        outputSettings.prettyPrint(false);
-
         List<News> newsList = new ArrayList<>();
         try {
             for (Element item : root) {
@@ -47,7 +44,7 @@ public class CrawlingNewsServiceImpl implements CrawlingNewsService {
                         Elements photo = innerItem.getElementsByClass("photo");
                         int dtIdx = 0;
                         String imagePath = "";
-                        if (photo != null && photo.size() > 0) {
+                        if (!photo.isEmpty()) {
                             imagePath = photo.select("img").attr("src");
                             dtIdx = 1;
                         }
@@ -128,7 +125,7 @@ public class CrawlingNewsServiceImpl implements CrawlingNewsService {
     private LocalDateTime getDateTime(Document document, String className, String attributeKey){
         LocalDateTime returnDateTime = null;
         Elements elements = document.getElementsByClass(className);
-        if (elements != null && elements.size() > 0) {
+        if (!elements.isEmpty()) {
             DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
             String strTime = elements.attr(attributeKey);
             if (strTime != "")

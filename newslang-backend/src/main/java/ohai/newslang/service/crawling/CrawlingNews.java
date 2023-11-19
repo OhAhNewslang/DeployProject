@@ -56,16 +56,16 @@ public class CrawlingNews implements Runnable{
                         // 1. 마지막 페이지에 뉴스가 없을 경우
                         // 2. 마지막 페이지의 뉴스 중 이미 등록된 뉴스가 있을 경우
 
-                        if (newsList.size() < 1) break;
+                        if (newsList.isEmpty()) break;
 
                         List<String> urlList = newsList.stream()
-                                .map(t -> t.getUrl())
+                                .map(News::getUrl)
                                 .collect(Collectors.toList());
                         List<String> alreadyExistUrl = newsArchiveService.isAlreadyExistUrl(urlList);
 
-                        if (alreadyExistUrl.size() > 0)
+                        if (!alreadyExistUrl.isEmpty())
                             break;
-                        if (newsList.size() == alreadyExistUrl.size())
+                        if (newsList.isEmpty())
                             break;
 
                         List<NewsArchive> newsArchiveList = new ArrayList<>();
@@ -86,7 +86,7 @@ public class CrawlingNews implements Runnable{
                                         .build());
                             }
                         });
-                        if (newsArchiveList.size() > 0)
+                        if (!newsArchiveList.isEmpty())
                             newsArchiveService.saveAll(newsArchiveList);
                         pageNo++;
                     }catch (Exception ex){
