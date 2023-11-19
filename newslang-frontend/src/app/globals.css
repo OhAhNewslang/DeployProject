@@ -121,6 +121,7 @@ button { padding:0 5px; height:26px; border:none; background:none; }
 .wid370 {width:370px !important;}
 .wid380 {width:380px !important;}
 .wid400 {width:400px !important;}
+.wid500 {width:500px !important;}
 .wid560 {width:560px !important;}
 .wid575 {width:575px !important;}
 .wid600 {width:600px !important;}
@@ -357,16 +358,17 @@ button.btnUnselRed { padding:0 10px;border:1px solid #c3c6c9; background:#fff; c
 .main3 .leftMenuBox .list > li > ul > li.active a { color:#000; }
 
 /*login1*/
-.login1 { position:absolute; left:50%; top:50%; margin:-220px 0 0 -130px; }
+.login1 { position:absolute; left:50%; top:50%; margin:-220px 0 0 -130px; scale: 110%}
 .login1 h1 { padding-left:25px; margin-bottom:15px;}
 .login1 .loginBox { width:260px; height:290px; border:1px solid #d6d9db; padding:15px 30px; }
 .login1 .loginBox > input { display:block; width:100%; margin-top:15px; border:none; height:35px; line-height:35px; border-bottom:1px solid #acacac; }
-.login1 .loginBox input:focus { border-bottom:1px solid #000; }
+.login1 .loginBox input:focus { background-color: #e6edff; border-bottom:1px solid #000; }
 .login1 .loginBox div { margin:18px 0; overflow:hidden; }
 .login1 .loginBox div input[type="checkbox"] { border:1px solid #b9b9b9; border-radius:0; }
 .login1 .loginBox div input+label { margin-right:10px; color:#b4b9bf; font-size:11px; }
 .login1 .loginBox select { width:100%; height:26px; border:1px solid #b9b9b9; font-size:11px;}
-.login1 .btnLogin { margin-top:20px; width:100%; height:50px; background:#000000; color:#fff; font-size:11px; font-weight:600; }
+.login1 .btnLogin { margin-top:20px; width:100%; height:50px; background:#000000; color:#fff; font-size:15px; font-weight:600; }
+.login1 .joinBtn{ text-decoration-line: none; text-decoration: #00a2e2}
 
 /*login3*/
 .login3 { position:absolute; left:50%; top:50%; width:300px; height:370px; margin:-230px 0 0 -170px;  padding:19px 30px 35px; background:#2764bb; border-radius:3px; text-align:center; }
@@ -423,6 +425,7 @@ table tr.subSum2 td:nth-child(3) { font-weight:600; text-align:center; }
 .wrap3 { width:333px; margin-bottom:30px; float:left; padding-right:20px;}
 .tableWrap h3 { margin-bottom:5px; }
 
+.joinTable { position:absolute; left:44%; top:50%; margin:-220px 0 0 -130px; scale: 120%;width: 500px; }
 
 /*gray /th:blue,center/ td:left */
 .tableTypeMain thead th { background:#D9D9D9; color:#136abd; text-align:center; }

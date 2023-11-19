@@ -63,9 +63,9 @@ export default function RootLayout({ children }) {
 					<input type="checkbox" className="save" name="pass" />
 					<label>비밀번호 저장</label>
 				</div>
-				<a href="/signin">회원가입</a>
+				<a class="joinBtn" href="/signin">아직 회원이 아니신가요?</a>
 				<p class="loginresult">{loginmsg}</p>
-				<button type="submit" className="btnLogin">버튼</button>
+				<button type="submit" className="btnLogin">로그인</button>
 			</div>
 		</div>
 	</div>

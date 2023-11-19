@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
 
         }}>
 
-            <div className="wrap wid560">
+            <div className="joinTable">
                 <div className="contentTitleBox">
                     <h4>회원가입</h4>
                 </div>
