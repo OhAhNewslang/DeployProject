@@ -24,7 +24,7 @@ public interface NewsArchiveRepository extends JpaRepository<NewsArchive, Long> 
 
     Page<NewsArchive> findAll(Pageable pageable);
 
-    @Query(value = "select * from NewsArchive" +
+    @Query(value = "select * from news_archive" +
             " where media_name in :mediaNameList" +
             " and category in :categoryList" +
             " and contents REGEXP :keywords",
@@ -34,7 +34,7 @@ public interface NewsArchiveRepository extends JpaRepository<NewsArchive, Long> 
                                        @Param("keywords") String keywords,
                                        Pageable pageable);
 
-    @Query(value = "select * from NewsArchive" +
+    @Query(value = "select * from news_archive" +
             " where media_name in :mediaNameList" +
             " and category in :categoryList",
             nativeQuery = true)
@@ -42,7 +42,7 @@ public interface NewsArchiveRepository extends JpaRepository<NewsArchive, Long> 
                                                      @Param("categoryList") List<String> categoryList,
                                                      Pageable pageable);
 
-    @Query(value = "select * from NewsArchive" +
+    @Query(value = "select * from news_archive" +
             " where (contents REGEXP :keyword or title REGEXP :keyword)" +
             " LIMIT 3",
             nativeQuery = true)

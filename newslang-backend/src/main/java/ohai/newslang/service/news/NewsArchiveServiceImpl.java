@@ -137,7 +137,7 @@ public class NewsArchiveServiceImpl implements NewsArchiveService{
 
         // 페이징 조건
         PageRequest pageable = PageRequest
-                .of(page - 1, limit, Sort.by("post_Date_Time").descending());
+                .of(page - 1, limit, Sort.by("post_date_time").descending());
 
         // 전체 구독인 경우 모든 미디어 추가
         if (mediaSubscribeStatus == SubscribeStatus.ALL) {

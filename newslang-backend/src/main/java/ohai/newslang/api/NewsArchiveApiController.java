@@ -31,12 +31,6 @@ public class NewsArchiveApiController {
         return newsArchiveService.findAllLiveNews(page,limit);
     }
 
-//    @GetMapping("/guest/live")
-//    public ResponseThumbnailNewsDto getLiveNews(@RequestBody @Valid RequestPageSourceDto pageSourceDto){
-//        return newsArchiveService
-//                .findAllLiveNews(pageSourceDto.getPage(), pageSourceDto.getLimit());
-//    }
-
     @GetMapping("/subscribe")
     public ResponseThumbnailNewsDto getSubscribeNews(
             @RequestParam("page") int page,
